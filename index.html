@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Correlation Result</title>
+</head>
+<body>
+  <h1>Correlation Result</h1>
+  <pre id="result">Loading...</pre>
+  <script>
+    fetch('correlation_result.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('result').textContent =
+          `Pair: ${data.pair}\nCorrelation: ${data.correlation}`;
+      })
+      .catch(err => {
+        document.getElementById('result').textContent = 'Error loading data.';
+      });
+  </script>
+</body>
+</html>
