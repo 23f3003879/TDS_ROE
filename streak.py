@@ -1,4 +1,4 @@
-from typing import list
+from typing import List
 
 def longest_positive_streak(nums: List[int]) -> int:
     """
